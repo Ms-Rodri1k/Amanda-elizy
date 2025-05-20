@@ -21,7 +21,7 @@
 
 
 body {
-    background-color: grey;
+    background-color: white;
     height: 100vh;
     margin: 0px;
 }
@@ -49,6 +49,7 @@ header p {
 
 p {
     font-family: var(--fonte-padrao);
+    margin-top: 40px;
 }
 
 h2 {
@@ -64,9 +65,13 @@ button {
 }
 
 h3 {
-    font-family: var(--fonte-cabeca);
+    font-family: var(--fonte-padrao);
+    font-weight: 300;
+    color: #3e342b;
     background-color: white;
- padding-left: 20px;
+
+    padding-left: 20px;
+    margin-bottom: 30px;
 }
 
 nav {
@@ -85,6 +90,8 @@ div {
     color: var(--cor2);
     text-align: left;
     padding: 40px;
+    margin-top: -30px;
+    margin-bottom: -30px;
 }
 
 .galeria {
@@ -97,8 +104,61 @@ div {
 }
 
 .galeria img {
-  width: 200px;
+  width: 250px;
   height: auto;
   border-radius: 1px;
   object-fit: cover;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.texto {
+  flex: 1;
+  min-width: 200px;
+  background-color: #3e342b42;
+}
+
+.texto h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.texto p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.texto button {
+  padding: 10px 20px;
+  background-color: var(--cor1);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container img {
+  flex: 1;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container img {
+    max-width: 100%;
+  }
 }

@@ -4,10 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: 'Personable';
+  src: url(/fonte//Personable.otf) format('opentype');
+}
 :root{
     --cor1: #3e342b;
     --cor2: #ffc874;
@@ -16,7 +18,7 @@
 
     --fonte-padrao: 'Inter', sans-serif, 'cursive';
     --fonte-destaque: 'Raleway', serif, helvetica;
-    --fonte-nome: 'Play fair', sans-serif, monospace;
+    --fonte-nome: 'Personable' serif;
     --fonte-cabeca: 'Libre Baskerville', serif;
 
 
@@ -25,6 +27,16 @@ body {
     height: 100vh;
     margin: 0px;
 }
+ main {
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.405);
+    min-width: 300px;
+    max-width: 1000px;
+ }
 
 }
 
@@ -36,20 +48,22 @@ header {
 
 header h1 {
     font-weight: normal;
-    font-family: var(--fonte-nome);
-    font-style: italic;
+    font-family: 'Personable';
     font-size: 5em;
+    margin-bottom: -20px;
+    margin-top: 10px;
 }
 
 header p {
     font-family: 'Raleway';
     font-weight: 300;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    margin-top: -20px;
 }
 
 p {
     font-family: var(--fonte-padrao);
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 h2 {
@@ -71,27 +85,61 @@ h3 {
     background-color: white;
 
     padding-left: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
 nav {
     background-color: white;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: -20px;
 }
 
 nav a {
-    padding-left: 50px;
+    padding-left: 40px;
     font-family: var(--fonte-padrao);
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor4);
+}
+
+a:hover {
+  color: var(--cor4);
 }
 
 div {
     background-color: var(--cor4);
-    color: var(--cor2);
+    color: var(--cor4);
     text-align: left;
     padding: 40px;
-    margin-top: -30px;
-    margin-bottom: -30px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+#imagem {
+  background-color: rgba(0, 0, 0, 0.508);
+  background-image: url(../images/amanda1200.jpeg);
+  background-repeat: repeat;
+  background-position:  top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+main {
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.405);
+    min-width: 300px;
+    max-width: 1px;
 }
 
 .galeria {
@@ -122,7 +170,7 @@ div {
 .texto {
   flex: 1;
   min-width: 200px;
-  background-color: #3e342b42;
+  background-color: var(--cor3);
 }
 
 .texto h1 {
@@ -148,7 +196,7 @@ div {
   flex: 1;
   max-width: 300px;
   width: 100%;
-  height: auto;
+  height: 267px;
   border-radius: 2px;
 }
 
@@ -159,6 +207,6 @@ div {
   }
 
   .container img {
-    max-width: 100%;
+    max-width: 70vh;
   }
 }
